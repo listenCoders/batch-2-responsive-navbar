@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav bar</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      display: flex;
+      background-color: goldenrod;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 5px 0 0;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+    }
+
+    .dot {
+      display: none;
+    }
+    .box {
+      display: none;
+    }
+    @media screen and (max-width: 800px) {
+      nav {
+        display: none;
+      }
+      a {
+        background-color: blue;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+      .box:checked ~ .navBar {
+        display: block;
+      }
+      .dot {
+        display: block;
+      }
+    }
+  </style>
+
+  <body>
+    <label for="abc" class="dot"><h1>&#9776;</h1></label>
+    <input type="checkbox" name="" id="abc" class="box" />
+
+    <nav class="navBar">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">VIDEOS</a></li>
+        <li><a href="">YT</a></li>
+        <li><a href="">FB</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
